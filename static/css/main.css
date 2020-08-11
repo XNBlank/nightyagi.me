@@ -60,9 +60,7 @@ footer {
   justify-content: space-between;
   border-top: 1px solid #ceceee;
   margin-top: auto;
-  position: absolute;
   width: 100%;
-  bottom: 0;
   background: white; }
   footer .footer-col {
     font-size: 0.8rem;
