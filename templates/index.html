@@ -16,9 +16,9 @@
             {% if form_message %}
             <p>{{ form_message }}</p>
             {% endif %}
-            <input id="contact_name" type="text" name="name" placeholder="Your Name" required/>
-            <input id="contact_email" type="email" name="email" placeholder="Your Email" required/>
-            <textarea id="contact_textarea" name="message" placeholder="What's on your mind?" required></textarea>
+            <input id="contact_name" aria-label="Your Name" type="text" name="name" placeholder="Your Name" required/>
+            <input id="contact_email" aria-label="Your Email" type="email" name="email" placeholder="Your Email" required/>
+            <textarea id="contact_textarea" aria-label="Your Message to NightYagi" name="message" placeholder="What's on your mind?" required></textarea>
             <input id="recaptcha_response" type="hidden" name="recaptcha_response" required />
             <button class="btn g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-callback="onSubmit" data-action="submit" type="submit">Send</button>
         </form>
