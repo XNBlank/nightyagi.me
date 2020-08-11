@@ -1,0 +1,26 @@
+{% include "global/header.html" %}
+<div id="wrapper">
+    <section class="text-center">
+        <h4>I'll be adding stuff here soon...</h4>
+        <div class="big-icons">
+            <a href="https://github.com/XNBlank/" title="My Github" target="_blank" rel="nofollow"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://twitter.com/night_yagi" title="My Twitter" target="_blank" rel="nofollow"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+    </section>
+    <section id="contact-section">
+        <h2>Get In Touch</h2>
+        <p>You can get in touch with me by filling out the form below, or messaging me on my <a href="https://www.twitter.com/night_yagi/" target="_blank">Twitter</a>. I'll get back to you as soon as possible!</p>
+
+        <form id="contact-form" method="POST" action="/">
+            {% if form_message %}
+            <p>{{ form_message }}</p>
+            {% endif %}
+            <input id="contact_name" type="text" name="name" placeholder="Your Name" required/>
+            <input id="contact_email" type="email" name="email" placeholder="Your Email" required/>
+            <textarea id="contact_textarea" name="message" placeholder="What's on your mind?" required></textarea>
+            <input id="recaptcha_response" type="hidden" name="recaptcha_response" required />
+            <button class="btn g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-callback="onSubmit" data-action="submit" type="submit">Send</button>
+        </form>
+    </section>
+</div>
+{% include "global/footer.html" %}

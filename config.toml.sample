@@ -1,0 +1,5 @@
+recaptcha_site_key = '' # ReCAPTCHA public site key
+recaptcha_private = '' # ReCAPTCHA private site key
+contact_email = '' # Contact form recipiant
+contact_from = '' # From email address
+contact_from_nicename = '' # From email display name

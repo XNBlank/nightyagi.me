@@ -1,0 +1,22 @@
+<footer>
+    <div class="footer-col"><span>Copyright &copy; 2020</span></div>
+    <div class="footer-col"><a href="https://github.com/XNBlank/nightyagi.me" title="Made with Rust and Love" target="_blank" rel="nofollow">Made with 🦀 Rust and <ion-icon name="heart"></ion-icon></a></div>
+    <div class="footer-col"><a href="https://github.com/XNBlank/" title="My Github" target="_blank" rel="nofollow"><ion-icon name="logo-github"></ion-icon></a><a href="https://twitter.com/night_yagi" title="My Twitter" target="_blank" rel="nofollow"><ion-icon name="logo-twitter"></ion-icon></a></div>
+</footer>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script>
+    function onSubmit(token) {
+        var name = document.getElementById("contact_name").value;
+        var email = document.getElementById("contact_email").value;
+        var message = document.getElementById("contact_textarea").value;
+
+        if (document.getElementById("contact-form").reportValidity() && name !== "" && email !== "" && message !== "") {
+            document.getElementById("recaptcha_response").value = grecaptcha.getResponse();
+
+            document.getElementById("contact-form").submit();
+        }
+    }
+</script>
+</body>
+</html>
